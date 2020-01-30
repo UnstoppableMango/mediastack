@@ -11,12 +11,12 @@ stages:
 #   - checkout: self
 
 - stage: Deploy
+  pool: Linux
   jobs:
   - deployment: Deploy
     environment: Prod
     strategy:
       runOnce:
         deploy:
-          pool: Local
           steps:
           - bash: 'echo "Test Step"'
