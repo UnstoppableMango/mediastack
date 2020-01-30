@@ -1,0 +1,7 @@
+trigger:
+- master
+
+pool: Linux
+
+steps:
+- checkout: self
