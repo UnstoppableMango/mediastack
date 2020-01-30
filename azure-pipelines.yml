@@ -18,5 +18,6 @@ stages:
     strategy:
       runOnce:
         deploy:
+          pool: UnMango-Local
           steps:
           - bash: 'echo "Test Step"'
