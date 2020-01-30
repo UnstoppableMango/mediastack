@@ -5,10 +5,10 @@ resources:
 - repo: self
 
 stages:
-- stage: Build
-  pool: Linux
-  steps:
-  - checkout: self
+# - stage: Build
+#   pool: Linux
+#   steps:
+#   - checkout: self
 
 - stage: Deploy
   pool:
