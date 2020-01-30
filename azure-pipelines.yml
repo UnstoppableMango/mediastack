@@ -21,6 +21,12 @@ stages:
           # pool: UnMango-Local
           steps:
           - bash: 'echo "Test Step"'
+
+          - task: DockerInstaller@0
+            displayName: Docker Installer
+            inputs:
+              dockerVersion: 17.09.0-ce
+              releaseType: stable
           
           - task: DockerCompose@0
             displayName: Run services
