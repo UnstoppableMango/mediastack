@@ -1,7 +1,23 @@
 trigger:
 - master
 
-pool: Linux
+resources:
+- repo: self
 
-steps:
-- checkout: self
+stages:
+- stage: Build
+  pool: Linux
+  steps:
+  - checkout: self
+
+- stage: Deploy
+  pool:
+    name: Local
+    demands: docker
+  jobs:
+  - deployment: Deploy
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - bash: 'echo "Test Step"'
