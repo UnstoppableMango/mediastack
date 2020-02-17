@@ -12,6 +12,7 @@ stages:
 
 - stage: Deploy
   #pool: Linux
+  pool: Deployment
   jobs:
   - deployment: Deploy
     environment: Prod
@@ -19,7 +20,7 @@ stages:
       runOnce:
         deploy:
           # pool: UnMango-Local
-          pool: Deployment
+          #pool: Deployment
           steps:
           #- task: DockerInstaller@0
           #  displayName: Docker Installer
