@@ -18,7 +18,8 @@ stages:
     strategy:
       runOnce:
         deploy:
-          pool: UnMango-Local
+          # pool: UnMango-Local
+          pool: Deployment
           steps:
           #- task: DockerInstaller@0
           #  displayName: Docker Installer
