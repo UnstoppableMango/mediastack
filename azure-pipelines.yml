@@ -11,7 +11,7 @@ stages:
 #   - checkout: self
 
 - stage: Deploy
-  pool: Linux
+  #pool: Linux
   jobs:
   - deployment: Deploy
     environment: Prod
